@@ -3,7 +3,7 @@ Description=Hello-world service
 
 [Service]
 Type=oneshot
-Exec=echo "hello, world!"
+ExecStart=echo "hello, world!"
 
 [Install]
 WantedBy=multi-user.target
