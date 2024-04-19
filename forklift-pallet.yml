@@ -1,0 +1,6 @@
+forklift-version: v0.7.0-alpha.3
+
+pallet:
+  path: github.com/ethanjli/pallet-example-exports
+  description: Example deployment of example hello-world packages for a minimal demo of file exports with Forklift
+  readme-file: README.md

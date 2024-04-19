@@ -1,0 +1,18 @@
+package:
+  description: A hello-world script and systemd service
+  maintainers:
+    - name: Ethan Li
+      email: lietk12@gmail.com
+  license: Apache-2.0
+  sources:
+    - https://github.com/ethanjli/pallet-example-exports
+
+deployment:
+  provides:
+    file-exports:
+      - source: overlays/etc/systemd/system/hello-world.service
+        targets:
+          - overlays/etc/systemd/system/hello-world.service
+      - source: overlays/etc/systemd/system/multi-user.target.wants/hello-world.service
+        targets:
+          - overlays/etc/systemd/system/multi-user.target.wants/hello-world.service
