@@ -33,7 +33,7 @@ path of that directory by running `forklift stage locate-bun next`. Inside that 
 `overlays/etc/systemd/system/multi-user.target.wants/hello-world.service`.
 If you are running Forklift on a system (such as the PlanktoScope OS) which
 overlays the `exports/overlays/etc` subdirectory of the next staged Forklift pallet into `/etc`,
-after reboot and run `sudo systemctl status hello-world.service`, you should see that
+after you reboot and run `sudo systemctl status hello-world.service` you should see that
 `hello-world.service` ran and printed a hello-world message.
 
 ### Forking
