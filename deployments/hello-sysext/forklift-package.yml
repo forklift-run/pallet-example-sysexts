@@ -1,0 +1,18 @@
+package:
+  description: A hello-world systemd sysext
+  maintainers:
+    - name: Ethan Li
+      email: lietk12@gmail.com
+  license: Apache-2.0
+  sources:
+    - https://github.com/ethanjli/pallet-example-exports
+
+deployment:
+  provides:
+    file-exports:
+      - source: sysext/usr/lib/extension-release.d/extension-release.hello-world
+        targets:
+          - sysexts/hello-world/usr/lib/extension-release.d/extension-release.hello-world
+      - source: sysext/usr/bin/hello-world-forklift
+        targets:
+          - sysexts/hello-world/usr/bin/hello-world-forklift
