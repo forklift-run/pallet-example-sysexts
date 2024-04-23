@@ -1,0 +1,10 @@
+[Unit]
+Description=Run a hello-world script provided by a systemd sysext
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStart=/usr/bin/hello-world-extension
+
+[Install]
+WantedBy=multi-user.target

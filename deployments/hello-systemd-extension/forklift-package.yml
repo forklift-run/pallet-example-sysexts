@@ -1,5 +1,5 @@
 package:
-  description: A hello-world systemd sysext
+  description: A hello-world systemd sysext and confext
   maintainers:
     - name: Ethan Li
       email: lietk12@gmail.com
@@ -10,6 +10,7 @@ package:
 deployment:
   provides:
     file-exports:
-      - source: sysext
+      - description: systemd sysext and confext (provided together), named "hello-world"
+        source: extension
         targets:
-          - sysexts/hello-world
+          - extensions/hello-world
