@@ -35,9 +35,10 @@ path of that directory by running `forklift stage locate-bun next`. Inside that 
 `overlays/etc/systemd/system/hello-world.service` and
 `overlays/etc/systemd/system/multi-user.target.wants/hello-world.service`, and also some files in
 `extensions/hello-world`.
-If you are running Forklift on a system (such as the PlanktoScope OS) which
-overlays the `exports/overlays/etc` subdirectory of the next staged Forklift pallet into `/etc`,
-after you reboot and run `sudo systemctl status hello-world.service` you should see that
+If you are running Forklift on a system (such as the
+[PlanktoScope OS](https://docs-edge.planktoscope.community/reference/software/architecture/os/))
+which overlays the `exports/overlays/etc` subdirectory of the next staged Forklift pallet into
+`/etc`, after you reboot and run `sudo systemctl status hello-world.service` you should see that
 `hello-world.service` ran and printed a hello-world message. Or, if you're running Forklift on a
 system (such as
 [ethanjli/ublue-forklift-sysext-demo](https://github.com/ethanjli/ublue-forklift-sysext-demo))
