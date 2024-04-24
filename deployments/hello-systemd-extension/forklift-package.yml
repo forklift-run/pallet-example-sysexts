@@ -1,0 +1,16 @@
+package:
+  description: A hello-world systemd sysext and confext
+  maintainers:
+    - name: Ethan Li
+      email: lietk12@gmail.com
+  license: Apache-2.0
+  sources:
+    - https://github.com/ethanjli/pallet-example-exports
+
+deployment:
+  provides:
+    file-exports:
+      - description: systemd sysext and confext (provided together), named "hello-world"
+        source: extension
+        targets:
+          - extensions/hello-world

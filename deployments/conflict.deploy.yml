@@ -1,2 +1,5 @@
 package: /deployments/conflict
+# Note: if you change this from true to false, you'll introduce a conflict between package
+# deployment `conflict` (this deployment) and package deployment `hello-service`. Try doing it and
+# then running `forklift pallet check` to see what conflict is introduced:
 disabled: true
