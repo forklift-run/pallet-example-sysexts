@@ -5,9 +5,12 @@ A simple "hello-world" Forklift pallet illustrating Forklift's file export featu
 
 pallet-example-exports is a [Forklift](https://github.com/PlanktoScope/forklift) pallet
 specifying an example set of Forklift packages and package deployments for a "hello world"-style
-demonstration of file exports of systemd units to overlay into `/etc`. This pallet is structured as
-a monorepo in which all packages to be deployed are also defined by the pallet (because it is also a
-Forklift repository).
+demonstration of file exports of systemd units to overlay into `/etc`, and for a "hello world"-style
+demonstration of file exports of
+[systemd-sysext/confexts](https://www.freedesktop.org/software/systemd/man/latest/systemd-sysext.html)
+to overlay into the OS. For simplicity, this pallet is structured as a monorepo in which all
+packages to be deployed are also defined by the pallet (because this Git repo is also declared as a
+Forklift package repository).
 
 ## Usage
 
@@ -30,11 +33,18 @@ This pallet will create a new directory in `~/.local/share/forklift/stages`; you
 path of that directory by running `forklift stage locate-bun next`. Inside that directory, the
 `exports` subdirectory will be a file tree with files at
 `overlays/etc/systemd/system/hello-world.service` and
-`overlays/etc/systemd/system/multi-user.target.wants/hello-world.service`.
+`overlays/etc/systemd/system/multi-user.target.wants/hello-world.service`, and also some files in
+`extensions/hello-world`.
 If you are running Forklift on a system (such as the PlanktoScope OS) which
 overlays the `exports/overlays/etc` subdirectory of the next staged Forklift pallet into `/etc`,
 after you reboot and run `sudo systemctl status hello-world.service` you should see that
-`hello-world.service` ran and printed a hello-world message.
+`hello-world.service` ran and printed a hello-world message. Or, if you're running Forklift on a
+system (such as
+[ethanjli/ublue-forklift-sysext-demo](https://github.com/ethanjli/ublue-forklift-sysext-demo))
+which overlays or bind-mounts the `exports/extensions` subdirectory of the next staged Forklift
+pallet into `/var/lib/extensions` and `/var/lib/confexts`, after you reboot and run
+`sudo systemctl status hello-world-extension.service` you should see that
+`hello-world-extension.service` ran and printed a hello-world message.
 
 ### Forking
 
