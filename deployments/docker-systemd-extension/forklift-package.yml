@@ -42,7 +42,7 @@ features:
         - description: docker-compose binary
           source-type: http
           url: https://github.com/flatcar/sysext-bakery/releases/download/latest/docker_compose-2.24.5-x86-64.raw
-          target: extensions/docker-compose.raw
+          target: extensions/docker_compose.raw
   compose-arm64:
     description: Docker Compose sysext for 64-bit ARM OSes
     provides:
@@ -50,4 +50,4 @@ features:
         - description: docker-compose binary
           source-type: http
           url: https://github.com/flatcar/sysext-bakery/releases/download/latest/docker_compose-2.24.5-arm64.raw
-          target: extensions/docker-compose.raw
+          target: extensions/docker_compose.raw
