@@ -1,3 +1,0 @@
-package: /deployments/lazydocker-systemd-extension
-features:
-  - amd64

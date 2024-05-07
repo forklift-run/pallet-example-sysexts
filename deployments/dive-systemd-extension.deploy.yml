@@ -1,0 +1,3 @@
+package: /deployments/dive-systemd-extension
+features:
+  - amd64
