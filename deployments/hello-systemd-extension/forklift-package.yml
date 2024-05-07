@@ -12,5 +12,4 @@ deployment:
     file-exports:
       - description: systemd sysext and confext (provided together), named "hello-world"
         source: extension
-        targets:
-          - extensions/hello-world
+        target: extensions/hello-world

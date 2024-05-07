@@ -11,5 +11,4 @@ deployment:
   provides:
     file-exports:
       - source: system
-        targets:
-          - overlays/etc/systemd/system
+        target: overlays/etc/systemd/system

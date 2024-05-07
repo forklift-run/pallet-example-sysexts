@@ -10,9 +10,5 @@ package:
 deployment:
   provides:
     file-exports:
-      - source: overlays/etc/systemd/system/hello-world.service
-        targets:
-          - overlays/etc/systemd/system/hello-world.service
-      - source: overlays/etc/systemd/system/multi-user.target.wants/hello-world.service
-        targets:
-          - overlays/etc/systemd/system/multi-user.target.wants/hello-world.service
+      - target: overlays/etc/systemd/system/hello-world.service
+      - target: overlays/etc/systemd/system/multi-user.target.wants/hello-world.service

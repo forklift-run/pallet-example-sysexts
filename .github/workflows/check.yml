@@ -16,7 +16,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        forklift-version: [0.7.0-alpha.3]
+        forklift-version: [0.7.1]
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -32,5 +32,5 @@ jobs:
       - name: Run Forklift checks
         run: forklift dev plt check
 
-      - name: Make Forklift deployment plan:w
+      - name: Make Forklift deployment plan
         run: forklift dev plt plan
