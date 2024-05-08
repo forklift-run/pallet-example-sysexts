@@ -1,0 +1,19 @@
+package:
+  description: A /usr overlay providing chezmoi, a tool for displaying information about the host
+  # Note: maintainers describes the maintainer(s) of the Forklift package, not the upstream software
+  maintainers:
+    - name: Ethan Li
+      email: lietk12@gmail.com
+  license: MIT
+  sources:
+    - https://github.com/twpayne/chezmoi
+
+features:
+  amd64:
+    description: Provides the chezmoi binary for 64-bit x86 OSes
+    provides:
+      file-exports:
+        - description: chezmoi binary
+          source-type: http
+          url: https://github.com/twpayne/chezmoi/releases/download/v2.48.0/chezmoi-linux-amd64-musl
+          target: overlays/usr/bin/chezmoi
