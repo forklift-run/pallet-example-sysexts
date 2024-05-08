@@ -1,0 +1,53 @@
+package:
+  description: A systemd sysext to make Docker available
+  # Note: maintainers describes the maintainer(s) of the Forklift package, not the upstream software
+  maintainers:
+    - name: Ethan Li
+      email: lietk12@gmail.com
+  license: Apache-2.0
+  sources:
+    - https://github.com/moby/moby
+    - https://github.com/docker/cli
+    - https://github.com/docker/compose
+    - https://github.com/flatcar/sysext-bakery
+
+features:
+  amd64:
+    description: Docker sysext for 64-bit x86 OSes
+    provides:
+      file-exports:
+        - description: docker binary and systemd services
+          source-type: http
+          url: https://github.com/flatcar/sysext-bakery/releases/download/latest/docker-25.0.3-x86-64.raw
+          target: extensions/docker.raw
+  arm64:
+    description: Docker sysext for 64-bit ARM OSes
+    provides:
+      file-exports:
+        - description: docker binary and systemd services
+          source-type: http
+          url: https://github.com/flatcar/sysext-bakery/releases/download/latest/docker-25.0.3-arm64.raw
+          target: extensions/docker.raw
+  systemd-service-enablement:
+    description: Enables the docker.service systemd unit provided by the Docker sysext
+    provides:
+      file-exports:
+        - description: systemd confext, named "docker"
+          source: extension
+          target: extensions/docker-service-enablement
+  compose-amd64:
+    description: Docker Compose sysext for 64-bit x86 OSes
+    provides:
+      file-exports:
+        - description: docker-compose binary
+          source-type: http
+          url: https://github.com/flatcar/sysext-bakery/releases/download/latest/docker_compose-2.24.5-x86-64.raw
+          target: extensions/docker_compose.raw
+  compose-arm64:
+    description: Docker Compose sysext for 64-bit ARM OSes
+    provides:
+      file-exports:
+        - description: docker-compose binary
+          source-type: http
+          url: https://github.com/flatcar/sysext-bakery/releases/download/latest/docker_compose-2.24.5-arm64.raw
+          target: extensions/docker_compose.raw

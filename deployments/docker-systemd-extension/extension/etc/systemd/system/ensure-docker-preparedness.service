@@ -1,0 +1,14 @@
+[Unit]
+Description=Set up the host so that docker.service will run correctly
+# This service must run before docker.socket and thus before basic.target, so we can't have systemd
+# pulling in the default dependencies for services:
+DefaultDependencies=no
+Requires=sysinit.target
+After=sysinit.target
+
+[Service]
+Type=oneshot
+ExecStart=bash -c "if ! getent group docker > /dev/null; then groupadd docker; fi"
+
+[Install]
+WantedBy=docker.socket

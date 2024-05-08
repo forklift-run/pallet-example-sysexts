@@ -1,4 +1,4 @@
-forklift-version: v0.7.0
+forklift-version: v0.7.2-alpha.0
 
 pallet:
   path: github.com/ethanjli/pallet-example-exports
