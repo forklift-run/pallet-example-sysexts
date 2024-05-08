@@ -19,7 +19,7 @@ features:
         - description: docker binary and systemd services
           source-type: http
           url: https://github.com/flatcar/sysext-bakery/releases/download/latest/docker-25.0.3-x86-64.raw
-          target: extensions/docker.raw
+          target: extensions/docker-25.0.3-x86-64.raw
   arm64:
     description: Docker sysext for 64-bit ARM OSes
     provides:
@@ -27,7 +27,7 @@ features:
         - description: docker binary and systemd services
           source-type: http
           url: https://github.com/flatcar/sysext-bakery/releases/download/latest/docker-25.0.3-arm64.raw
-          target: extensions/docker.raw
+          target: extensions/docker-25.0.3-arm64.raw
   systemd-service-enablement:
     description: Enables the docker.service systemd unit provided by the Docker sysext
     provides:
@@ -42,7 +42,7 @@ features:
         - description: docker-compose binary
           source-type: http
           url: https://github.com/flatcar/sysext-bakery/releases/download/latest/docker_compose-2.24.5-x86-64.raw
-          target: extensions/docker_compose.raw
+          target: extensions/docker_compose-2.24.5-x86-64.raw
   compose-arm64:
     description: Docker Compose sysext for 64-bit ARM OSes
     provides:
@@ -50,4 +50,4 @@ features:
         - description: docker-compose binary
           source-type: http
           url: https://github.com/flatcar/sysext-bakery/releases/download/latest/docker_compose-2.24.5-arm64.raw
-          target: extensions/docker_compose.raw
+          target: extensions/docker_compose-2.24.5-arm64.raw
