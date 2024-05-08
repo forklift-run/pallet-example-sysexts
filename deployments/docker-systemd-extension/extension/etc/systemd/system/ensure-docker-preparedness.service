@@ -1,0 +1,10 @@
+[Unit]
+Description=Set up the host so that docker.service will run correctly
+Before=docker.socket
+
+[Service]
+Type=oneshot
+ExecStart=bash -c "if ! getent group docker > /dev/null; then groupadd docker; fi"
+
+[Install]
+WantedBy=multi-user.target
