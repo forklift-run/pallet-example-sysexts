@@ -9,6 +9,8 @@ Before=docker.socket
 
 [Service]
 Type=oneshot
+# This is needed for the groupadd command to work:
+User=root
 ExecStart=bash -c "if ! getent group docker > /dev/null; then groupadd docker; fi"
 
 [Install]
