@@ -28,7 +28,7 @@ features:
           source-type: http
           url: https://github.com/flatcar/sysext-bakery/releases/download/latest/docker-25.0.3-arm64.raw
           target: extensions/docker.raw
-  systemd-service-enablement:
+  service:
     description: Enables the docker.service systemd unit provided by the Docker sysext
     provides:
       file-exports:

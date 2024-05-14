@@ -1,5 +1,5 @@
 package: /deployments/docker-systemd-extension
 features:
   - amd64
-  - systemd-service-enablement
+  - service
   - compose-amd64
