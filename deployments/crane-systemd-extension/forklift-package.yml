@@ -20,6 +20,6 @@ deployment:
         # any other labels; in real-world use, you should provide a label which doesn't change, for
         # reproducibility (and also because Forklift's download cache never updates downloads of
         # images for any given label)
-        url: docker.io/chainguard/crane:latest
+        url: cgr.dev/chainguard/crane:latest
         source: usr/bin/crane
         target: extensions/crane/usr/bin/crane
