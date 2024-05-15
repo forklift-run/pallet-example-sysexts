@@ -1,0 +1,18 @@
+package:
+  description: A systemd sysext providing a musl-linked Neovim from Alpine Linux
+  # Note: maintainers describes the maintainer(s) of the Forklift package, not the upstream software
+  maintainers:
+    - name: Ethan Li
+      email: lietk12@gmail.com
+  license: (Apache-2.0 AND Vim)
+  sources:
+    - https://github.com/neovim/neovim
+
+deployment:
+  provides:
+    file-exports:
+      - description: systemd sysext
+        source-type: oci-image
+        url: ghcr.io/ethanjli/sysext-dir-neovim:sha-b29b12d
+        source: /
+        target: extensions/neovim

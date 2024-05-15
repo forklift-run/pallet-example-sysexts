@@ -12,6 +12,6 @@ deployment:
     file-exports:
       - description: systemd sysext
         source-type: oci-image
-        url: ghcr.io/ethanjli/sysext-dir-ublue-dx-fonts:sha-5a72ec8
+        url: ghcr.io/ethanjli/sysext-dir-ublue-dx-fonts:sha-736cc2d
         source: /
         target: extensions/ublue-dx-fonts
