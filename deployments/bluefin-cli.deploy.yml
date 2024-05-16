@@ -1,0 +1,2 @@
+package: /deployments/bluefin-cli-systemd-extension
+disabled: true
