@@ -5,6 +5,7 @@ Description=Set up the host so that docker.service will run correctly
 DefaultDependencies=no
 Requires=sysinit.target
 After=sysinit.target
+Before=docker.socket
 
 [Service]
 Type=oneshot

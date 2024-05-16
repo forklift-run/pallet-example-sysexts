@@ -5,8 +5,8 @@ A simple "hello-world" Forklift pallet illustrating Forklift's file export featu
 
 pallet-example-exports is a [Forklift](https://github.com/PlanktoScope/forklift) pallet
 specifying an example set of Forklift packages and package deployments for a "hello world"-style
-demonstration of file exports of systemd units to overlay into `/etc`, and for a "hello world"-style
-demonstration of file exports of
+demonstration of file exports of systemd units to overlay into `/etc`, and for a demonstration of
+a variety of different kinds of file exports of
 [systemd-sysext/confexts](https://www.freedesktop.org/software/systemd/man/latest/systemd-sysext.html)
 to overlay into the OS. For simplicity, this pallet is structured as a monorepo in which all
 packages to be deployed are also defined by the pallet (because this Git repo is also declared as a
@@ -45,7 +45,9 @@ system (such as
 which overlays or bind-mounts the `exports/extensions` subdirectory of the next staged Forklift
 pallet into `/var/lib/extensions` and `/var/lib/confexts`, after you reboot and run
 `sudo systemctl status hello-world-extension.service` you should see that
-`hello-world-extension.service` ran and printed a hello-world message.
+`hello-world-extension.service` ran and printed a hello-world message; and you should see several
+sysexts available if you run `systemd-sysext status`; these sysexts provide Docker as well as
+several commands (`dive`, `crane`, `nvim`) which you can run.
 
 ### Forking
 
