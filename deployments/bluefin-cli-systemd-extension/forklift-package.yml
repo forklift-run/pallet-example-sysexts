@@ -13,6 +13,6 @@ deployment:
     file-exports:
       - description: systemd sysext
         source-type: oci-image
-        url: ghcr.io/ethanjli/sysext-dir-bluefin-cli:sha-7eaf752
+        url: ghcr.io/ethanjli/sysext-dir-bluefin-cli:sha-686f31f
         source: /
         target: extensions/bluefin-cli
