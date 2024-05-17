@@ -8,11 +8,35 @@ package:
   # licenses and sources for the package declaration; this is just a partial proof-of-concept
   # anyways!
 
-deployment:
-  provides:
-    file-exports:
-      - description: systemd sysext
-        source-type: oci-image
-        url: ghcr.io/ethanjli/sysext-dir-bluefin-cli:sha-45d9ea4
-        source: /
-        target: extensions/bluefin-cli
+features:
+  alpine-flatwrap:
+    description:
+      bluefin-cli tools provided through Alpine Linux and sandboxed with flatwrap
+      (brew is not included because it's not available on Alpine)
+    provides:
+      file-exports:
+        - description: systemd sysext
+          source-type: oci-image
+          url: ghcr.io/ethanjli/sysext-dir-bluefin-cli-alpine-flatwrap:sha-b39e432
+          source: /
+          target: extensions/bluefin-cli
+  wolfi-flatwrap:
+    description:
+      bluefin-cli tools provided through the official bluefin-cli image and sandboxed with flatwrap
+    provides:
+      file-exports:
+        - description: systemd sysext
+          source-type: oci-image
+          url: ghcr.io/ethanjli/sysext-dir-bluefin-cli-wolfi-flatwrap:sha-b39e432
+          source: /
+          target: extensions/bluefin-cli
+  wolfi-flix:
+    description:
+      bluefin-cli tools provided through the official bluefin-cli image and sandboxed with flix
+    provides:
+      file-exports:
+        - description: systemd sysext
+          source-type: oci-image
+          url: ghcr.io/ethanjli/sysext-dir-bluefin-cli-wolfi-flix:sha-b39e432
+          source: /
+          target: extensions/bluefin-cli
