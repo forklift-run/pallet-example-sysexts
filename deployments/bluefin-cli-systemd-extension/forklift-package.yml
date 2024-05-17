@@ -17,7 +17,7 @@ features:
       file-exports:
         - description: systemd sysext
           source-type: oci-image
-          url: ghcr.io/ethanjli/sysext-dir-bluefin-cli-alpine-flatwrap:sha-b39e432
+          url: ghcr.io/ethanjli/sysext-dir-bluefin-cli-alpine-flatwrap:sha-541579a
           source: /
           target: extensions/bluefin-cli
   wolfi-flatwrap:
