@@ -1,0 +1,4 @@
+package: /deployments/bluefin-cli-systemd-extension
+features:
+  - wolfi-flatwrap
+disabled: true
