@@ -1,3 +1,0 @@
-package: /deployments/chezmoi-overlay
-features:
-  - amd64

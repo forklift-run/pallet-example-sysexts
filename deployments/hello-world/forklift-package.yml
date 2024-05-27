@@ -5,7 +5,7 @@ package:
       email: lietk12@gmail.com
   license: Apache-2.0
   sources:
-    - https://github.com/ethanjli/pallet-example-exports
+    - https://github.com/ethanjli/pallet-example-sysexts
 
 deployment:
   provides:

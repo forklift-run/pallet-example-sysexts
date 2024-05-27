@@ -1,4 +1,4 @@
-package: /deployments/bluefin-cli-systemd-extension
+package: /deployments/bluefin-cli
 features:
   - wolfi-flix
 disabled: true

@@ -1,4 +1,4 @@
-package: /deployments/docker-systemd-extension
+package: /deployments/docker
 features:
   - amd64
   - service

@@ -1,9 +1,0 @@
-[Unit]
-Description=Hello-world service
-
-[Service]
-Type=oneshot
-ExecStart=echo "hello world, from a systemd service overlaid into /etc by Forklift (not as a confext)!"
-
-[Install]
-WantedBy=multi-user.target
