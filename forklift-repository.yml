@@ -1,6 +1,6 @@
 forklift-version: v0.7.2-alpha.6
 
 repository:
-  path: github.com/ethanjli/pallet-example-sysexts
+  path: github.com/forklift-run/pallet-example-sysexts
   description: Example systemd system extensions & configuration extensions
   readme-file: README.md
