@@ -1,4 +1,4 @@
-package: /deployments/docker
+package: /packages/docker
 features:
   - amd64
   - service

@@ -1,4 +1,4 @@
-package: /deployments/busybox
+package: /packages/busybox
 features:
   - alpine-flix
 disabled: true

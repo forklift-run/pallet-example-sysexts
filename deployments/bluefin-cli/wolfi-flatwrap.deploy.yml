@@ -1,4 +1,4 @@
-package: /deployments/bluefin-cli
+package: /packages/bluefin-cli
 features:
   - wolfi-flatwrap
 disabled: true
